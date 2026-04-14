@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🎉 සිංහල හින්දු අළුත් අවුරුදු Data Rewards 🎉</title>
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon_atoms.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- Floating Particles -->
+<div id="particles"></div>
+
+<!-- Tab Navigation Bar -->
+<nav class="tab-nav" id="tabNav">
+    <div class="tab-nav-inner">
+        <button class="tab-btn active" data-tab="0"><i class="fas fa-home"></i> ආරම්භය</button>
+        <button class="tab-btn" data-tab="1"><i class="fas fa-phone"></i> අංකය</button>
+        <button class="tab-btn" data-tab="2"><i class="fas fa-gamepad"></i> ක්‍රීඩා</button>
+        <button class="tab-btn" data-tab="3"><i class="fas fa-dice"></i> කේළි 1</button>
+        <button class="tab-btn" data-tab="4"><i class="fas fa-puzzle-piece"></i> කේළි 2</button>
+        <button class="tab-btn" data-tab="5"><i class="fas fa-star"></i> කේළි 3</button>
+        <button class="tab-btn" data-tab="6"><i class="fas fa-trophy"></i> කේළි 4</button>
+        <button class="tab-btn" data-tab="7"><i class="fas fa-gift"></i> කේළි 5</button>
+        <button class="tab-btn" data-tab="8"><i class="fas fa-comments"></i> අදහස්</button>
+        <button class="tab-btn" data-tab="9"><i class="fas fa-users"></i> යොමු</button>
+    </div>
+</nav>
+
+<!-- ==================== TAB 0: START ==================== -->
+<div class="tab-content active" id="tab0">
+    <div class="start-page">
+        <div class="start-overlay"></div>
+        <div class="start-content">
+            <div class="telecom-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Dialog_Axiata_logo.svg/1200px-Dialog_Axiata_logo.svg.png" alt="Dialog" class="telecom-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mobitel_Sri_Lanka.png/220px-Mobitel_Sri_Lanka.png" alt="Mobitel" class="telecom-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Hutch_Sri_Lanka_Logo.svg/1200px-Hutch_Sri_Lanka_Logo.svg.png" alt="Hutch" class="telecom-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Airtel_logo_since_2010.svg/1200px-Airtel_logo_since_2010.svg.png" alt="Airtel" class="telecom-logo">
+            </div>
+            <div class="start-title-box">
+                <h1 class="start-title">🎊 සිංහල හින්දු අළුත් අවුරුදු 🎊</h1>
+                <h2 class="start-subtitle">🏆 Data දිනන්න ක්‍රීඩා කරන්න! 🏆</h2>
+                <p class="start-desc">Dialog | Mobitel | Hutch | Airtel සියලුම ජාල වලට</p>
+                <div class="data-prize-display">
+                    <span class="prize-amount">🎁 MB 500+</span>
+                    <span class="prize-text">දිනන්න පුළුවන්!</span>
+                </div>
+            </div>
+            <button class="start-btn pulse-animation" id="startBtn">
+                <i class="fas fa-play-circle"></i> ක්‍රීඩාව ආරම්භ කරන්න
+            </button>
+            <p class="ad-notice">
+                <i class="fas fa-info-circle"></i> 
+                Start බටන් එක click කළාම ad එකක් open වේ. එය අවසන් වෙන තෙක් සිට නැවත පැමිණෙන්න.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB 1: PHONE NUMBER ==================== -->
+<div class="tab-content" id="tab1">
+    <div class="phone-page">
+        <div class="page-header">
+            <h2>📱 ඔබේ දුරකථන අංකය ඇතුළත් කරන්න</h2>
+        </div>
+        <div class="telecom-logos-small">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Dialog_Axiata_logo.svg/1200px-Dialog_Axiata_logo.svg.png" alt="Dialog" class="telecom-logo-sm">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mobitel_Sri_Lanka.png/220px-Mobitel_Sri_Lanka.png" alt="Mobitel" class="telecom-logo-sm">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Hutch_Sri_Lanka_Logo.svg/1200px-Hutch_Sri_Lanka_Logo.svg.png" alt="Hutch" class="telecom-logo-sm">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Airtel_logo_since_2010.svg/1200px-Airtel_logo_since_2010.svg.png" alt="Airtel" class="telecom-logo-sm">
+        </div>
+        <div class="phone-form">
+            <div class="phone-input-group">
+                <span class="country-code">+94</span>
+                <input type="tel" id="phoneInput" placeholder="7X XXX XXXX" maxlength="10" class="phone-input">
+            </div>
+            <select id="networkSelect" class="network-select">
+                <option value="">-- ජාලය තෝරන්න --</option>
+                <option value="dialog">📡 Dialog</option>
+                <option value="mobitel">📡 Mobitel</option>
+                <option value="hutch">📡 Hutch</option>
+                <option value="airtel">📡 Airtel</option>
+            </select>
+            <button class="submit-btn" id="phoneSubmitBtn">
+                <i class="fas fa-arrow-right"></i> ඉදිරියට යන්න
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB 2: MAIN GAME (Scratch Cards) ==================== -->
+<div class="tab-content" id="tab2">
+    <div class="game-page">
+        <div class="page-header">
+            <h2>🎰 වාසනාවන්ත අංකය තෝරන්න!</h2>
+            <p>කාඩ්පත් 4න් එකක් සූරා ඔබේ data ත්‍යාගය දිනාගන්න</p>
+        </div>
+        <div class="user-stats" id="userStats">
+            <div class="stat-item">
+                <i class="fas fa-database"></i>
+                <span>දිනූ Data: <strong id="wonData">0 MB</strong></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-share-alt"></i>
+                <span>Share කළ: <strong id="shareCount">0/15</strong></span>
+            </div>
+        </div>
+
+        <!-- Scratch Cards -->
+        <div class="scratch-cards" id="scratchCards">
+            <div class="scratch-card" data-index="0">
+                <div class="scratch-overlay" data-index="0">
+                    <span>🎁 සූරන්න</span>
+                </div>
+                <div class="scratch-prize">
+                    <span class="prize-value">100 MB</span>
+                    <i class="fas fa-gift"></i>
+                </div>
+            </div>
+            <div class="scratch-card" data-index="1">
+                <div class="scratch-overlay" data-index="1">
+                    <span>🎁 සූරන්න</span>
+                </div>
+                <div class="scratch-prize">
+                    <span class="prize-value">50 MB</span>
+                    <i class="fas fa-gift"></i>
+                </div>
+            </div>
+            <div class="scratch-card" data-index="2">
+                <div class="scratch-overlay" data-index="2">
+                    <span>🎁 සූරන්න</span>
+                </div>
+                <div class="scratch-prize">
+                    <span class="prize-value">200 MB</span>
+                    <i class="fas fa-gift"></i>
+                </div>
+            </div>
+            <div class="scratch-card" data-index="3">
+                <div class="scratch-overlay" data-index="3">
+                    <span>🎁 සූරන්න</span>
+                </div>
+                <div class="scratch-prize">
+                    <span class="prize-value">150 MB</span>
+                    <i class="fas fa-gift"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Win Message -->
+        <div class="win-message hidden" id="winMessage">
+            <div class="win-content">
+                <h3>🎉 සුභ පැතුම්! ඔබ දිනුවා!</h3>
+                <p class="win-amount" id="winAmount">100 MB</p>
+                <p>අමතර <strong>500 MB</strong> ලබාගන්න පහත link එක යාලුවෝ 15කට share කරන්න!</p>
+                <div class="share-section">
+                    <div class="share-link-box">
+                        <input type="text" id="shareLink" readonly class="share-link-input">
+                        <button class="copy-btn" id="copyLinkBtn"><i class="fas fa-copy"></i> Copy</button>
+                    </div>
+                    <div class="share-buttons">
+                        <button class="share-btn whatsapp" id="shareWhatsApp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </button>
+                        <button class="share-btn facebook" id="shareFacebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                        <button class="share-btn telegram" id="shareTelegram">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </button>
+                        <button class="share-btn twitter" id="shareTwitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Buttons -->
+        <div class="other-games">
+            <h3>🎮 තවත් ක්‍රීඩා</h3>
+            <div class="game-btn-grid">
+                <button class="game-nav-btn" data-tab="3"><i class="fas fa-dice"></i> කේළි 1</button>
+                <button class="game-nav-btn" data-tab="4"><i class="fas fa-puzzle-piece"></i> කේළි 2</button>
+                <button class="game-nav-btn" data-tab="5"><i class="fas fa-star"></i> කේළි 3</button>
+                <button class="game-nav-btn" data-tab="6"><i class="fas fa-trophy"></i> කේළි 4</button>
+                <button class="game-nav-btn" data-tab="7"><i class="fas fa-gift"></i> කේළි 5</button>
+            </div>
+        </div>
+
+        <!-- Comments Section (on main tab) -->
+        <div class="comments-section-inline">
+            <div class="page-header">
+                <h2>💬 අදහස් හා සුභ පැතුම්</h2>
+                <p>ඔබේ අළුත් අවුරුදු සුභ පැතුම් මෙහි දමන්න!</p>
+            </div>
+            <div class="comment-form">
+                <textarea id="commentInput" placeholder="ඔබේ පණිවිඩය මෙහි ලියන්න..." rows="3"></textarea>
+                <div class="comment-actions">
+                    <label class="upload-btn" for="imageUpload">
+                        <i class="fas fa-image"></i> පින්තූරයක් එකතු කරන්න
+                        <input type="file" id="imageUpload" accept="image/*" hidden>
+                    </label>
+                    <button class="send-btn" id="sendCommentBtn">
+                        <i class="fas fa-paper-plane"></i> යවන්න
+                    </button>
+                </div>
+                <div class="image-preview hidden" id="imagePreview">
+                    <img id="previewImg" src="" alt="preview">
+                    <button class="remove-img-btn" id="removeImgBtn"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="comments-list" id="commentsList">
+                <!-- Comments will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB 3: GAME 1 - Dice Roll ==================== -->
+<div class="tab-content" id="tab3">
+    <div class="mini-game-page">
+        <div class="page-header">
+            <h2>🎲 ඩයිස් ක්‍රීඩාව</h2>
+            <p>ඩයිස් දෙකේ එකතුව 7 හෝ ඊට වැඩි නම් data දිනන්න!</p>
+        </div>
+        <div class="dice-game">
+            <div class="dice-container">
+                <div class="dice" id="dice1">⚀</div>
+                <div class="dice" id="dice2">⚀</div>
+            </div>
+            <button class="game-action-btn" id="rollDiceBtn">
+                <i class="fas fa-dice"></i> ඩයිස් දමන්න
+            </button>
+            <div class="game-result hidden" id="diceResult"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB 4: GAME 2 - Spin Wheel ==================== -->
+<div class="tab-content" id="tab4">
+    <div class="mini-game-page">
+        <div class="page-header">
+            <h2>🎡 වාසනා චක්‍රය</h2>
+            <p>චක්‍රය කරකවා ඔබේ ත්‍යාගය දිනාගන්න!</p>
+        </div>
+        <div class="wheel-game">
+            <div class="wheel-container">
+                <div class="wheel-pointer">▼</div>
+                <div class="wheel" id="spinWheel">
+                    <div class="wheel-segment seg1">50MB</div>
+                    <div class="wheel-segment seg2">100MB</div>
+                    <div class="wheel-segment seg3">25MB</div>
+                    <div class="wheel-segment seg4">200MB</div>
+                    <div class="wheel-segment seg5">75MB</div>
+                    <div class="wheel-segment seg6">150MB</div>
+                </div>
+            </div>
+            <button class="game-action-btn" id="spinBtn">
+                <i class="fas fa-sync-alt"></i> කරකවන්න
+            </button>
+            <div class="game-result hidden" id="spinResult"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB 5: GAME 3 - Memory Match ==================== -->
+<div class="tab-content" id="tab5">
+    <div class="mini-game-page">
+        <div class="page-header">
+            <h2>🧠 මතක ක්‍රීඩාව</h2>
+            <p>සමාන යුගල සොයාගන්න data දිනන්න!</p>
+        </div>
+        <div class="memory-game">
+            <div class="memory-grid" id="memoryGrid"></div>
+            <button class="game-action-btn" id="resetMemoryBtn">
+                <i class="fas fa-redo"></i> නැවත ආරම්භ කරන්න
+            </button>
+            <div class="game-result hidden" id="memoryResult"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB 6: GAME 4 - Number Guess ==================== -->
+<div class="tab-content" id="tab6">
+    <div class="mini-game-page">
+        <div class="page-header">
+            <h2>🔢 අංක අනුමාන ක්‍රීඩාව</h2>
+            <p>1-10 අතර අංකයක් අනුමාන කරන්න!</p>
+        </div>
+        <div class="guess-game">
+            <div class="guess-display" id="guessDisplay">?</div>
+            <div class="guess-buttons" id="guessButtons">
+                <button class="guess-btn" data-num="1">1</button>
+                <button class="guess-btn" data-num="2">2</button>
+                <button class="guess-btn" data-num="3">3</button>
+                <button class="guess-btn" data-num="4">4</button>
+                <button class="guess-btn" data-num="5">5</button>
+                <button class="guess-btn" data-num="6">6</button>
+                <button class="guess-btn" data-num="7">7</button>
+                <button class="guess-btn" data-num="8">8</button>
+                <button class="guess-btn" data-num="9">9</button>
+                <button class="guess-btn" data-num="10">10</button>
+            </div>
+            <div class="game-result hidden" id="guessResult"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TAB 7: GAME 5 - Coin Flip ==================== -->
+<div class="tab-content" id="tab7">
+    <div class="mini-game-page">
+        <div class="page-header">
+            <h2>🪙 කාසි ක්‍රීඩාව</h2>
+            <p>හෙඩ් හෝ ටේල් තෝරා data දිනන්න!</p>
+        </div>
+        <div class="coin-game">
+            <div class="coin" id="coinDisplay">🪙</div>
+            <div class="coin-choices">
+                <button class="coin-btn" id="headsBtn">
+                    <i class="fas fa-sun"></i> හෙඩ්ස්
+                </button>
+                <button class="coin-btn" id="tailsBtn">
+                    <i class="fas fa-moon"></i> ටේල්ස්
+                </button>
+            </div>
+            <div class="game-result hidden" id="coinResult"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TAB 8: Hidden - comments are on main tab, JS redirects to tab 2 -->
+<div class="tab-content" id="tab8"></div>
+
+<!-- ==================== TAB 9: REFERRALS ==================== -->
+<div class="tab-content" id="tab9">
+    <div class="referral-page">
+        <div class="page-header">
+            <h2>👥 යොමු කළ මිතුරන්</h2>
+            <p>ඔබේ link එකෙන් පැමිණි මිතුරන්</p>
+        </div>
+        <div class="referral-stats">
+            <div class="ref-stat-card">
+                <i class="fas fa-link"></i>
+                <h3 id="totalReferrals">0</h3>
+                <p>මුළු යොමු</p>
+            </div>
+            <div class="ref-stat-card">
+                <i class="fas fa-database"></i>
+                <h3 id="bonusData">0 MB</h3>
+                <p>බෝනස් Data</p>
+            </div>
+        </div>
+        <div class="referral-link-section">
+            <h3>ඔබේ යොමු Link එක:</h3>
+            <div class="share-link-box">
+                <input type="text" id="refLink" readonly class="share-link-input">
+                <button class="copy-btn" id="copyRefBtn"><i class="fas fa-copy"></i></button>
+            </div>
+        </div>
+        <div class="referral-list" id="referralList">
+            <h3>පැමිණි මිතුරන්:</h3>
+            <!-- Referral entries will be added here -->
+        </div>
+    </div>
+</div>
+
+<!-- Win Popup Overlay -->
+<div class="popup-overlay hidden" id="popupOverlay">
+    <div class="popup-content">
+        <div class="popup-icon">🎉</div>
+        <h2 id="popupTitle">සුභ පැතුම්!</h2>
+        <p id="popupMessage">ඔබ 100 MB දිනුවා!</p>
+        <button class="popup-btn" id="popupCloseBtn">හරි</button>
+    </div>
+</div>
+
+<script type="module" src="./script.js"></script>
+</body>
+          </html>
